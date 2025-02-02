@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px;
+    background: url("https://png.pngtree.com/thumb_back/fh260/background/20201022/pngtree-abstract-technology-background-line-high-tech-electricity-image_430309.jpg") center/cover no-repeat; /* Use the image */
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+
+h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* NAVIGATION - Left Aligned & Smaller Font */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Always stays left */
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-bottom: 2px solid white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Smaller text */
+    margin-right: 15px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* MAIN CONTAINER */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: nowrap;
+    background: url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zNzNiYXRjaDE1LWJnLTExZC14LmpwZw.jpg");
+}
+
+/* Sections */
+section {
+    width: 48%;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Hover Effect */
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Images */
+img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 3px solid white;
+}
+
+/* Divider Line */
+hr {
+    border: none;
+    height: 2px;
+    background: white;
+    margin: 20px 0;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section {
+        width: 48%;
+    }
+
+    /* NAVIGATION - Stays left but with smaller spacing */
+    nav {
+        justify-content: flex-start;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 5px 8px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* NAVIGATION - Keeps inline & stays left */
+    nav {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 4px 6px;
+        margin-right: 8px;
+    }
+}
